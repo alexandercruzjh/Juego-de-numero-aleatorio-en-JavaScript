@@ -36,11 +36,11 @@ function verificarIntento() {
         contadorIntentos++;
         limpiarCaja();
     }
-    if (contadorIntentos == intentos) {
-    asignarElemento('p', `Has agotado tus intentos. El número secreto era ${numeroSecreto}.`);
-    document.getElementById('reiniciar').removeAttribute('disabled');
-    document.getElementById('iniciar').setAttribute('disabled', true);
-}
+    if (contadorIntentos == intentos + 1) {
+        asignarElemento('p', `Has agotado tus intentos. El número secreto era ${numeroSecreto}.`);
+        document.getElementById('reiniciar').removeAttribute('disabled');
+        document.getElementById('iniciar').setAttribute('disabled', true);
+    }
 }
 
 // Funcion mensaje inicial
